@@ -6,15 +6,17 @@ import { AppComponent } from './app.component';
 import { ValueComponent } from './value/value.component';
 import { from } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { NavComponent } from './nav/nav.component';
 
 
 @NgModule({
    declarations: [
       AppComponent,
-      ValueComponent
+      ValueComponent,
+      NavComponent
    ],
    imports: [
-      BrowserModule, 
+      BrowserModule,
       HttpClientModule
    ],
    providers: [],
