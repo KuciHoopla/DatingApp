@@ -6,19 +6,19 @@ import { MessagesComponent } from './messages/messages.component';
 import { AuthGuard } from './_guards/auth.guard';
 
 export const appRoutes: Routes = [
-         { path: '', component: HomeComponent },
-         {
-           /* all children components will be protected to type in url directly by urlroute, 
+  { path: '', component: HomeComponent },
+  {
+    /* all children components will be protected to type in url directly by urlroute, 
            if you want protect some route just put it to the list children*/
 
-           path: '',
-           runGuardsAndResolvers: 'always',
-           canActivate: [AuthGuard],
-           children: [
-             { path: 'members', component: MemberListComponent },
-             { path: 'lists', component: ListsComponent },
-             { path: 'messages', component: MessagesComponent },
-           ],
-         },
-         { path: '**', redirectTo: '', pathMatch: 'full' },
-       ];
+    path: '',
+    runGuardsAndResolvers: 'always',
+    canActivate: [AuthGuard],
+    children: [
+      { path: 'members', component: MemberListComponent },
+      { path: 'lists', component: ListsComponent },
+      { path: 'messages', component: MessagesComponent },
+    ],
+  },
+  { path: '**', redirectTo: '', pathMatch: 'full' },
+];

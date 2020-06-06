@@ -12,11 +12,10 @@ export class AuthGuard implements CanActivate {
     private router: Router,
     private alertify: AlertifyService
   ) {}
-  
   canActivate(): boolean {
-    if (this.authService.loggedIn()) { 
-    return true;
-  }
+    if (this.authService.loggedIn()) {
+      return true;
+    }
     this.alertify.error('Do not do that!!!');
     this.router.navigate(['/home']);
     return false;
