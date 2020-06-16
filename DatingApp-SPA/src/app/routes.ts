@@ -8,8 +8,9 @@ import { AuthGuard } from './_guards/auth.guard';
 export const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   {
-    /* all children components will be protected to type in url directly by urlroute, 
-           if you want protect some route just put it to the list children*/
+    /* all children components will be protected to type in url directly by urlroute,
+    if you want protect some route just put it to the list children
+    */
 
     path: '',
     runGuardsAndResolvers: 'always',
