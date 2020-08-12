@@ -10,6 +10,9 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { JwtModule } from '@auth0/angular-jwt';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { TimeagoModule } from 'ngx-timeago';
+import { PaginationModule} from 'ngx-bootstrap/pagination';
 
 import { AuthService } from './_services/auth.service';
 import { HomeComponent } from './home/home.component';
@@ -55,11 +58,15 @@ export function tokenGetter() {
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     BsDropdownModule.forRoot(),
+    BsDatepickerModule.forRoot(),
+    PaginationModule.forRoot(),
+    TimeagoModule.forRoot(),
     TabsModule.forRoot(),
     NgxGalleryModule,
     FileUploadModule,
