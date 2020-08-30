@@ -23,7 +23,7 @@ export class MessagesResolver implements Resolve<Message[]> {
 
   resolve(route: ActivatedRouteSnapshot): Observable<Message[]> {
     // tslint:disable-next-line: no-string-literal
-    return this.userService.getMessages(this.authservice.decodedToken.nameid, 
+    return this.userService.getMessages(this.authservice.decodedToken.nameid,
       this.pageNumber, this.pageSize, this.messageContainer).pipe(
       catchError(error => {
         this.alertify.error('Problem retrieving messages');

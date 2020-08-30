@@ -84,11 +84,7 @@ namespace DatingApp.API.Data
                     case "created":
                         users = users.OrderByDescending(u => u.Created);
                         break;
-<<<<<<< HEAD
-                        default:
-=======
                     default:
->>>>>>> 56de0b010384e2fd3c67421b1929e042d6a8cc24
                         users = users.OrderByDescending(u => u.LastActive);
                         break;
                 }
